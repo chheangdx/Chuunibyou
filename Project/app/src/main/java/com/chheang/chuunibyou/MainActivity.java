@@ -1,31 +1,23 @@
 package com.chheang.chuunibyou;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
-import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        initialize();
     }
 
     @Override
@@ -36,17 +28,57 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public void onTabReselected(TabLayout.Tab tab) {
+        //nothing
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    @Override
+    public void onTabSelected(TabLayout.Tab tab) {
+        //clear backstack
+        FragmentManager fm = getFragmentManager();
+        for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {
+            fm.popBackStack();
         }
 
-        return super.onOptionsItemSelected(item);
+        //make a new fragment
+        switch(tab.getPosition()){
+            case 0:
+                break;
+            default:
+                break;
+        }
+    }
+
+    @Override
+    public void onTabUnselected(TabLayout.Tab tab) {
+        //nothing
+    }
+
+    @Override
+    public void onBackPressed() {
+        FragmentManager fm = getFragmentManager();
+        if (fm.getBackStackEntryCount() > 0) {
+            Log.i("MainActivity", "popping backstack");
+            fm.popBackStack();
+        } else {
+            Log.i("MainActivity", "nothing on backstack, calling super");
+            super.onBackPressed();
+        }
+    }
+
+    private void initialize(){
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_bar);
+        tabLayout.addTab(tabLayout.newTab().setText("Me"));
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_user);
+        tabLayout.addTab(tabLayout.newTab().setText("Friends"));
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_friends);
+        tabLayout.addTab(tabLayout.newTab().setText("Sounds"));
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_sounds);
+        tabLayout.addTab(tabLayout.newTab().setText("Videos"));
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_videos);
+        tabLayout.setOnTabSelectedListener(this);
     }
 }
