@@ -5,4 +5,5 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="fab_margin_vertical">91dp</dimen>
     <dimen name="tabs_height">75dp</dimen>
+    <dimen name="welcome_separator">50dp</dimen>
 </resources>

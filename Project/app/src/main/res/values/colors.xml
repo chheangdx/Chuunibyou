@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#3050B0</color>
     <color name="cyan">#00FFFF</color>
+    <color name="jet">#001111</color>
+    <color name="white">#FFFFFF</color>
 </resources>
