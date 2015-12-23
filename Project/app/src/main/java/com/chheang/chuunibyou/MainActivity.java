@@ -74,14 +74,16 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         setSupportActionBar(toolbar);
 
         final TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_bar);
+        tabLayout.addTab(tabLayout.newTab().setText("Stories"));
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_story);
         tabLayout.addTab(tabLayout.newTab().setText("Me"));
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_user);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_user);
         tabLayout.addTab(tabLayout.newTab().setText("Friends"));
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_friends);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_friends);
         tabLayout.addTab(tabLayout.newTab().setText("Sounds"));
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_sounds);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_sounds);
         tabLayout.addTab(tabLayout.newTab().setText("Videos"));
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_videos);
+        tabLayout.getTabAt(4).setIcon(R.drawable.ic_videos);
         tabLayout.setOnTabSelectedListener(this);
 
         //make welcome screen
