@@ -82,9 +82,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_friends);
         tabLayout.addTab(tabLayout.newTab().setText("Sounds"));
         tabLayout.getTabAt(3).setIcon(R.drawable.ic_sounds);
-        tabLayout.addTab(tabLayout.newTab().setText("Videos"));
-        tabLayout.getTabAt(4).setIcon(R.drawable.ic_videos);
-        tabLayout.setOnTabSelectedListener(this);
+//        tabLayout.addTab(tabLayout.newTab().setText("Videos"));
+//        tabLayout.getTabAt(4).setIcon(R.drawable.ic_videos);
+//        tabLayout.setOnTabSelectedListener(this);
 
         //make welcome screen
         FragmentManager fm = getFragmentManager();

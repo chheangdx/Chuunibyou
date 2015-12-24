@@ -1,5 +1,4 @@
 package com.chheang.chuunibyou.Miscellaneous;
-import java.io.InputStream;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -10,32 +9,37 @@ import android.view.View;
 
 import com.chheang.chuunibyou.R;
 
-public class GIFView extends View {
+import java.io.InputStream;
+
+/**
+ * Created by User on 12/24/2015.
+ */
+public class PressStartView extends View {
     private InputStream gifInputStream;
     private Movie gifMovie;
     private int movieWidth, movieHeight;
     private long movieDuration;
     private long movieStart;
 
-    public GIFView(Context context) {
+    public PressStartView(Context context) {
         super(context);
         init(context);
     }
 
 
-    public GIFView(Context context, AttributeSet attrs) {
+    public PressStartView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
-    public GIFView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public PressStartView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
     }
 
     private void init(Context context) {
         setFocusable(true);
-        gifInputStream = context.getResources().openRawResource(+R.drawable.giphy);
+        gifInputStream = context.getResources().openRawResource(+R.drawable.giphy2);
 
         gifMovie = Movie.decodeStream(gifInputStream);
         movieWidth = gifMovie.width();
