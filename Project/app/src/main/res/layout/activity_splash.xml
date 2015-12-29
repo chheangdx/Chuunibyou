@@ -1,24 +1,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:components="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:components="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:background="@color/jet"
-    >
+    android:orientation="vertical">
 
-    <com.chheang.chuunibyou.Miscellaneous.GIFView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|center_vertical"
         android:background="@drawable/border"
-        android:padding="50dp"
-         />
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.chheang.chuunibyou.Miscellaneous.GIFView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="50dp" />
+    </LinearLayout>
+
     <com.chheang.chuunibyou.Miscellaneous.PressStartView
         android:id="@+id/press_start"
-        android:layout_marginTop="@dimen/welcome_separator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|center_vertical"
-        />
+        android:layout_marginTop="@dimen/welcome_separator" />
 </LinearLayout> 
