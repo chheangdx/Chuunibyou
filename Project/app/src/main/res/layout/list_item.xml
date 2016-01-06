@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@drawable/border"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/list_item_icon"
+            android:layout_width="155dp"
+            android:layout_height="130dp"
+            android:src="@android:drawable/ic_dialog_alert"
+            android:padding="@dimen/fab_margin"
+            />
+
+        <TextView
+            android:id="@+id/list_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_toRightOf="@id/list_item_icon"
+            android:text="NAME: "
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:textColor="@color/colorPrimaryDark" />
+        <TextView
+            android:id="@+id/list_item_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_toRightOf="@id/list_item_icon"
+            android:layout_below="@id/list_item_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="DESCRIPTION:"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
