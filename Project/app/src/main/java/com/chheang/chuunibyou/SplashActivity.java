@@ -8,9 +8,10 @@ import android.view.View;
 
 import com.chheang.chuunibyou.Miscellaneous.GIFView;
 import com.chheang.chuunibyou.Miscellaneous.PressStartView;
-import com.parse.Parse;
-import com.parse.ParseACL;
-import com.parse.ParseUser;
+import com.firebase.client.Firebase;
+//import com.parse.Parse;
+//import com.parse.ParseACL;
+//import com.parse.ParseUser;
 
 import java.io.InputStream;
 
@@ -22,10 +23,12 @@ public class SplashActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Parse.initialize(this, getString(R.string.parse_app_id), getString(R.string.parse_client_key));
-        ParseUser.enableAutomaticUser();
-        ParseACL defaultACL = new ParseACL();
-        ParseACL.setDefaultACL(defaultACL, true);
+        //PARSE API IS NO LONGER BEING USED.
+//        Parse.initialize(this, getString(R.string.parse_app_id), getString(R.string.parse_client_key));
+//        ParseUser.enableAutomaticUser();
+//        ParseACL defaultACL = new ParseACL();
+//        ParseACL.setDefaultACL(defaultACL, true);
+        //Firebase API is now the new database being used.
 
         bgm = MediaPlayer.create(this, R.raw.splashbgm);
         bgm.setLooping(true);

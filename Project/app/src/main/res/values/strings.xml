@@ -10,7 +10,4 @@
 
     <string name="action_help">Help</string>
     <string name="action_logout">Log Out</string>
-
-    <string name="parse_app_id">f9KBDrf8lhpuTpr6NBXLc8pUZfGURYFtjYj8cS0j</string>
-    <string name="parse_client_key">jsZQP1qaASCTlBGn1B8DslPXNj2eztXnLaMTkfBa</string>
 </resources>

@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.Menu;
 
 import com.chheang.chuunibyou.Framents.WelcomeFragment;
+import com.firebase.client.Firebase;
 
 public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener{
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Firebase.setAndroidContext(this); //initialize Firebase API
         initialize();
     }
 

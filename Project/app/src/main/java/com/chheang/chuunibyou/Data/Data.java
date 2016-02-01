@@ -10,7 +10,6 @@ public class Data {
     private String name;
     private String description;
     //TODO icon
-    private Date date;
 
     public Data(){
         id = "";
@@ -41,13 +40,5 @@ public class Data {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 }
