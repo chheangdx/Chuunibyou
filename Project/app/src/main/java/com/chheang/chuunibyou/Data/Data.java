@@ -12,9 +12,19 @@ public class Data {
     //TODO icon
 
     public Data(){
-        id = "";
+
+    }
+
+    public Data(String id){
+        this.id = id;
         name = "";
         description = "";
+    }
+
+    public Data(String id, String name, String description){
+        this.id = id;
+        this.name = name;
+        this.description = description;
     }
 
 
